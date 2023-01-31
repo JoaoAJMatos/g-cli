@@ -1,0 +1,17 @@
+#ifndef GCLI_COLORS_H
+#define GCLI_COLORS_H
+
+#define BLACK 0x00000000
+#define WHITE 0x00FFFFFF
+#define RED   0x00FF0000
+#define GREEN 0x0000FF00
+#define BLUE  0x000000FF
+#define CYAN  0x0000FFFF
+#define MAGENTA 0x00FF00FF
+#define YELLOW  0x00FFFF00
+#define ORANGE  0x00FFA500
+#define PURPLE  0x00800080
+#define PINK    0x00FFC0CB
+#define BROWN   0x00A52A2A
+
+#endif // GCLI_COLORS_H
