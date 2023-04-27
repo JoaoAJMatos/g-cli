@@ -75,6 +75,7 @@ static int arg_parse(int* height, int* width, char* filename, int argc, char** a
                   strcpy(filename, args_step(&argc, &argv));
             } else {
                   printf("Unknown argument: %s\n", arg);
+                  show_help();
                   return 0;
             }
       }
