@@ -1,10 +1,10 @@
 #ifndef GCLI_H
 #define GCLI_H
 
-#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <assert.h>
 
 #define unreachable() assert(0 && "unreachable")
 #define print_color(index) printf("\e[48;5;%dm  ", index)
@@ -51,6 +51,5 @@ gcli_canvas_t gcli_canvas(const char* name, uint32_t pixels[], size_t width, siz
 Errno gcli_add_canvas(struct gcli* gcli, gcli_canvas_t canvas);
 Errno gcli_save_canvas(gcli_canvas_t canvas, const char* filename);
 void  gcli_print_last_error(struct gcli* gcli);
-
 
 #endif // GCLI_H
