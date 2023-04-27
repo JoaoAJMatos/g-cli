@@ -29,6 +29,10 @@ static void show_help()
       printf("  -h, --height <height>  Set the height of the image | Default 300\n");
       printf("  -v, --version          Show version\n");
       printf("  -h, --help             Show this help\n");
+      printf("  -f, --file <file>      Set the file to be displayed\n");
+      printf("Examples:\n");
+      printf("  gcli -w 100 -h 100 -f image.png\n");
+      printf("  gcli -f image.png\n");
 }
 
 /// @brief Parses the arguments.
