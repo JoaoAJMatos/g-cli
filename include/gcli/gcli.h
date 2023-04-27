@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <assert.h>
+#include <stdint.h>
 
 #define unreachable() assert(0 && "unreachable")
 #define print_color(index) printf("\e[48;5;%dm  ", index)
