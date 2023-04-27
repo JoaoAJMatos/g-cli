@@ -335,20 +335,6 @@ Errno gcli_init(struct gcli* gcli) {
       return GCLI_OK;
 }
 
-// TODO: Inline this to see if it improves performance.
-static void print_line(struct gcli gcli, size_t line_size, rgb_t* line) {
-      char *buffer = malloc(32 * line_size * sizeof(char));
-      char temp[1024] = {0};
-
-      for (size_t i = 0; i < line_size; i++) {
-            int index = find_closest_color_index(&gcli, line[i]);
-            sprintf(temp, "\e[48;5;%dm  ", index);
-            strcat(buffer, temp);
-      }
-
-      printf("%s", buffer);
-}
-
 
 /**
  * @brief Prints an image from a file into the terminal.
@@ -391,10 +377,8 @@ Errno gcli_img_to_terminal(struct gcli* gcli, const char* filename, int resized_
                         .b = (pixel & 0xFF) * ((pixel >> 8) & 0xFF)  / 255
                   };
 
-                  line[x] = rgb_color;
                   print_color(find_closest_color_index(gcli, rgb_color));
             }
-
             printf("\e[0m\n");
       }
       printf("\e[0m\n");
